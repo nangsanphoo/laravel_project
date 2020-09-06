@@ -26,7 +26,7 @@
 		  		<select class="form-control form-control-md" name="category">
 		    	<optgroup label="Choose Subcategory">
 		    		@foreach($categories as $category)
-		    		<option value="{{$category->id}}">{{$category->name}}</option>
+		    		<option value="{{$category->id}}" <?php if($subcategory->category_id==$category->id) echo "selected";?>>{{$category->name}}</option>
 		    		@endforeach
 		    	</optgroup>
 		    </select>

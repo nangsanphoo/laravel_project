@@ -37,7 +37,12 @@
 						
 
 					</tbody>
-					<tfoot id="shoppingcart_tfoot">
+					<tfoot>
+						<tr>
+							<td colspan="8">
+								<h3 class="text-right">Total:<span id="mytotal"></span> Ks</h3>
+							</td>
+						</tr>
 						<tr>
 							<td colspan="5">
 								<textarea class="form-control notes" placeholder="Any Request..."></textarea>

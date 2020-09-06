@@ -99,25 +99,11 @@ $(document).ready(function(){
 
 				})
 
-				tfoot+=`<tr>
-					<td colspan="8">
-					<h3 class="text-right">Total:${total} Ks</h3>
-					</td>
-				</tr>
-				<tr>
-							<td colspan="5">
-								<textarea class="form-control notes" placeholder="Any Request..."></textarea>
-							</td>
-							<td colspan="3">
-							
-								<a href="#" class="btn btn-secondary btn-block mainfullbtncolor buy_now">Checkout</a>
-							
-							</td>
-						</tr>
-				`;
+
 
 				$('#shoppingcart_table').html(html);
-				$('#shoppingcart_tfoot').html(tfoot);
+				$('#mytotal').html(total);
+				$('.alltotal').html(total);
 			}
 			else{
 				var noshopping=`<div class="col-12">

@@ -31,9 +31,14 @@
 	          				<td>{{$item->name}} </td>
 	          				<td>{{$item->price}} MMK</td>
 	          				<td>
-	          					<a href="#" class="btn btn-primary">Detail</a>
+	          					<a href="{{route('items.show',$item->id)}}" class="btn btn-primary">Detail</a>
 	          					<a href="{{route('items.edit',$item->id)}}" class="btn btn-warning">Edit</a>
-	          					<a href="#" class="btn btn-danger">Delete</a>
+	          					
+	          					<form method="post" action="{{route('items.destroy',$item->id)}}">
+	          						@csrf
+	          						@method('DELETE')
+	          						<button class="btn btn-danger">Delete</button>
+	          					</form>
 
 	          				</td>
 

@@ -15,7 +15,6 @@
 	          		<thead class="bg-dark text-white">
 	          			<tr>
 	          				<th>No</th>
-	          				
 	          				<th>Name</th>
 	          				<th>Photo</th>
 	          				<th>Actions</th>
@@ -28,11 +27,15 @@
 	          			<tr>
 	          				<td>{{$i++}}</td>
 	          				<td>{{$brand->name}} </td>
-	          				<td><img src="{{$brand->photo}}" class="img-fluid w-50"></td>
+	          				<td><img src="{{$brand->photo}}" class="img-fluid w-25"></td>
 	          				<td>
-	          					<a href="#" class="btn btn-primary">Detail</a>
+	          					
 	          					<a href="{{route('brands.edit',$brand->id)}}" class="btn btn-warning">Edit</a>
-	          					<a href="#" class="btn btn-danger">Delete</a>
+	          					<form action="{{route('brands.destroy',$brand->id)}}" method="post">
+	          						@csrf
+	          						@method('DELETE')
+	          						<button class="btn btn-danger">Delete</button>
+	          					</form>
 
 	          				</td>
 

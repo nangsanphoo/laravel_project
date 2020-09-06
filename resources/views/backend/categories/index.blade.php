@@ -28,11 +28,15 @@
 	          			<tr>
 	          				<td>{{$i++}}</td>
 	          				<td>{{$category->name}} </td>
-	          				<td><img src="{{$category->photo}}" class="img-fluid w-50"></td>
+	          				<td><img src="{{$category->photo}}" class="img-fluid w-25"></td>
 	          				<td>
-	          					<a href="#" class="btn btn-primary">Detail</a>
+	          					
 	          					<a href="{{route('categories.edit',$category->id)}}" class="btn btn-warning">Edit</a>
-	          					<a href="#" class="btn btn-danger">Delete</a>
+	          					<form method="post" action="{{route('categories.destroy',$category->id)}}">
+	          						@csrf
+	          						@method('DELETE')
+	          						<button class="btn btn-danger">Delete</button>
+	          					</form>
 
 	          				</td>
 
