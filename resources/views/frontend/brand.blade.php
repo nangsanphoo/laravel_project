@@ -43,7 +43,9 @@
 										</ul>
 									</div>
 
-									<a href="#" class="addtocartBtn text-decoration-none">Add to Cart</a>
+									<a href="#" class="addtocartBtn text-decoration-none" data-id="{{$item->id}}" data-photo="{{$item->photo}}" data-name="{{$item->name}}" data-price="{{$item->price}}">
+										 Add to Cart
+									</a>
 					        	</div>
 					        </div>
 					    </div>

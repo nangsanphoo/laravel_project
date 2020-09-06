@@ -40,10 +40,11 @@
 				</ul>
 			</div>	
 
-			@foreach($subcategory->items as $item)
+			
 			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
 
 				<div class="row">
+					@foreach($subcategory->items as $item)
 					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
 						<div class="card pad15 mb-3">
 						  	<img src="{{asset($item->photo)}}" class="card-img-top" alt="...">
